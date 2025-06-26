@@ -1,7 +1,7 @@
 
 import Table from 'react-bootstrap/Table';
 import { useSelector,useDispatch } from "react-redux";
-import { addTask } from "./todoSlice";
+import { addTask,taskDelete } from "./todoSlice";
 import { useState } from "react";
 const App=()=>{
   const data=useSelector(state=>state.todo.task);
@@ -15,6 +15,9 @@ const App=()=>{
        <tr>
           <td>{sno}</td>
           <td>{key.work}</td>
+          <td>
+            <span onClick={()=>{dispatch(taskDelete({id:key.id}))}}>delete</span>
+          </td>
        </tr>
       </>
     )
@@ -23,13 +26,13 @@ const App=()=>{
     <>
      <h1>Todo App!!</h1>
      Enter Task: <input type="text" value={txt} onChange={(e)=>{setTxt(e.target.value)}}/><br/><br/>
-     <button onClick={()=>{dispatch(addTask({work:txt}))}}>Add</button><br/><br/>
+     <button onClick={()=>{dispatch(addTask({id:Date.now(),work:txt}))}}>Add</button><br/><br/>
      <Table striped bordered hover size="sm">
       <thead>
         <tr>
           <th>Sno</th>
           <th>Task</th>
-          
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
