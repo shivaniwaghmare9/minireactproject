@@ -1,7 +1,7 @@
 
 import Table from 'react-bootstrap/Table';
 import { useSelector,useDispatch } from "react-redux";
-import { addTask,taskDelete,taskReindex } from "./todoSlice";
+import { addTask,taskDelete,taskReindex,taskComplete,taskInComplete } from "./todoSlice";
 import { useState } from "react";
 const App=()=>{
   const data=useSelector(state=>state.todo.task);
@@ -14,12 +14,29 @@ const App=()=>{
       <>
        <tr>
           <td>{sno}</td>
-          <td>{key.work}</td>
+          <td>{key.taskStatus ?(
+            <>
+            <span style={{color:"red",textDecoration:"line-through"}}>
+              {key.work}
+            </span>
+            </>
+          ):(
+            <>
+            {key.work}
+            </>
+          )}
+        </td>
           <td>
             <span onClick={()=>{dispatch(taskDelete({id:key.id}))}}>delete</span>
           </td>
           <td>
             <span onClick={()=>{dispatch(taskReindex({id:index}))}}>Remove</span>
+          </td>
+          <td>
+            <span onClick={()=>{dispatch(taskComplete({id:key.id}))}}>complete</span>
+          </td>
+          <td>
+            <span onClick={()=>{dispatch(taskInComplete({id:key.id}))}}>incomplete</span>
           </td>
        </tr>
       </>
@@ -29,7 +46,7 @@ const App=()=>{
     <>
      <h1>Todo App!!</h1>
      Enter Task: <input type="text" value={txt} onChange={(e)=>{setTxt(e.target.value)}}/><br/><br/>
-     <button onClick={()=>{dispatch(addTask({id:Date.now(),work:txt}))}}>Add</button><br/><br/>
+     <button onClick={()=>{dispatch(addTask({id:Date.now(),work:txt,taskStatus:false}))}}>Add</button><br/><br/>
      <Table striped bordered hover size="sm">
       <thead>
         <tr>
@@ -37,6 +54,8 @@ const App=()=>{
           <th>Task</th>
           <th>Delete</th>
           <th>Remove</th>
+          <th>Complete</th>
+          <th>Incomplete</th>
         </tr>
       </thead>
       <tbody>
