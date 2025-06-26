@@ -1,7 +1,7 @@
 
 import Table from 'react-bootstrap/Table';
 import { useSelector,useDispatch } from "react-redux";
-import { addTask,taskDelete,taskReindex,taskComplete,taskInComplete } from "./todoSlice";
+import { addTask,taskDelete,taskReindex,taskComplete,taskInComplete,taskEdit } from "./todoSlice";
 import { useState } from "react";
 const App=()=>{
   const data=useSelector(state=>state.todo.task);
