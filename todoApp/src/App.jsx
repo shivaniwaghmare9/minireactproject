@@ -9,10 +9,10 @@ const App=()=>{
   const[txt,setTxt]=useState("");
   const[btn,setBtn]=useState(true);
   const[myid,setMyid]=useState("");
-  const dataEdit=(key,work)=>{
+  const dataEdit=(id,work)=>{
        setTxt(work);
        setBtn(false);
-       setMyid(myid)
+       setMyid(id)
   }
   const MyeditData=()=>{
     dispatch(taskEdit({id:myid,work:txt}))
