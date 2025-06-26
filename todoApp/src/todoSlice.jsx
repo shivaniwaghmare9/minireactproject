@@ -29,8 +29,23 @@ const todoSlice=createSlice({
         taskReindex:(state,actions)=>{
             console.log(actions.payload.id)
             state.task.splice(actions.payload.id,1)
+        },
+        taskComplete:(state,actions)=>{
+            for(var i=0; i<state.task.length; i++)
+             if(state.task[i].id==actions.payload.id)
+             {
+                state.task[i].taskStatus=true;
+             }
+        },
+        taskInComplete:(state,actions)=>{
+            for(var i=0; i<state.task.length; i++)
+             if(state.task[i].id==actions.payload.id)
+             {
+                state.task[i].taskStatus=false;
+             }
         }
+        
     }
 })
-export const {addTask,taskDelete,taskReindex}=todoSlice.actions;
+export const {addTask,taskDelete,taskReindex,taskComplete,taskInComplete}=todoSlice.actions;
 export default todoSlice.reducer;
