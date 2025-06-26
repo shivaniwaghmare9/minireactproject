@@ -25,8 +25,12 @@ const todoSlice=createSlice({
                 return true;
                }
             })
+        },
+        taskReindex:(state,actions)=>{
+            console.log(actions.payload.id)
+            state.task.splice(actions.payload.id,1)
         }
     }
 })
-export const {addTask,taskDelete}=todoSlice.actions;
+export const {addTask,taskDelete,taskReindex}=todoSlice.actions;
 export default todoSlice.reducer;
