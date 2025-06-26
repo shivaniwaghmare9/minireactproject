@@ -7,6 +7,17 @@ const App=()=>{
   const data=useSelector(state=>state.todo.task);
   const dispatch=useDispatch();
   const[txt,setTxt]=useState("");
+  const[btn,setBtn]=useState(true);
+  const[myid,setMyid]=useState("");
+  const dataEdit=(key,work)=>{
+       setTxt(work);
+       setBtn(false);
+       setMyid(myid)
+  }
+  const MyeditData=()=>{
+    dispatch(taskEdit({id:myid,work:txt}))
+    setBtn(true)
+  }
   let sno=0;
   const ans=data.map((key,index)=>{
     sno++;
@@ -38,6 +49,9 @@ const App=()=>{
           <td>
             <span onClick={()=>{dispatch(taskInComplete({id:key.id}))}}>incomplete</span>
           </td>
+          <td>
+            <span onClick={()=>{dispatch(dataEdit(key.id,key.work))}}>edit</span>
+          </td>
        </tr>
       </>
     )
@@ -46,7 +60,17 @@ const App=()=>{
     <>
      <h1>Todo App!!</h1>
      Enter Task: <input type="text" value={txt} onChange={(e)=>{setTxt(e.target.value)}}/><br/><br/>
-     <button onClick={()=>{dispatch(addTask({id:Date.now(),work:txt,taskStatus:false}))}}>Add</button><br/><br/>
+     { btn ?(
+        <>
+        <button onClick={()=>{dispatch(addTask({id:Date.now(),work:txt,taskStatus:false}))}}>Add</button><br/><br/>
+        </>
+        ):(
+          <>
+          <button onClick={MyeditData}>Editsave</button>
+          </>
+        )
+
+     }
      <Table striped bordered hover size="sm">
       <thead>
         <tr>
@@ -56,6 +80,7 @@ const App=()=>{
           <th>Remove</th>
           <th>Complete</th>
           <th>Incomplete</th>
+          <th>Edit</th>
         </tr>
       </thead>
       <tbody>
