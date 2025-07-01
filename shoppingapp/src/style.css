@@ -24,11 +24,10 @@
   color: black;
 }
 #card {
-  transition: transform 0.3s ease;
-  transform-style: preserve-3d;
-  cursor: pointer;
+  transform: translateY(-5px); /* Thoda upar le jaata hai */
+  cursor: pointer;            /* Cursor ko pointer banata hai */
+  transition: transform 0.3s ease; /* Smooth animation ke liye */
 }
-
 #card:hover {
   transform: perspective(600px) translateZ(20px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -58,5 +57,12 @@ ul li{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+ul li:hover {
+  transform: perspective(600px) translateZ(20px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 /*============================================================================================================================================*/
