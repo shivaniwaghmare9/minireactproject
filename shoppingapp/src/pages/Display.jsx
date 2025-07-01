@@ -44,25 +44,25 @@ const Display=()=>{
     })
 
     function prePage()
-{
-  if(currentPage!==1)
-  {
-    setCurrentPage(currentPage-1);
-  }
-}
+    {
+      if(currentPage!==1)
+      {
+        setCurrentPage(currentPage-1);
+      }
+    }
 
-function changeCPage(id)
-{
-  setCurrentPage(id)
-}
+    function changeCPage(id)
+    {
+      setCurrentPage(id)
+    }
 
-function nextPage()
-{
-   if (currentPage!==npage )
-   {
-    setCurrentPage(currentPage+1);
-   }
-}
+    function nextPage()
+    {
+       if (currentPage!==npage )
+       {
+        setCurrentPage(currentPage+1);
+       }
+    }
 
     return(
         <>
