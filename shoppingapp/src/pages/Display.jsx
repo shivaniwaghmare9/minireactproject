@@ -12,6 +12,12 @@ const Display=()=>{
     useEffect(()=>{
         loadData()
     },[])
+    const ans=mydata.map((key)=>{
+        return(
+            <>
+            </>
+        )
+    })
     return(
         <>
          <h3>display</h3>
