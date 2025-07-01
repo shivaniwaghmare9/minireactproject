@@ -5,6 +5,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 40px;
+    gap: 40px;
 }
 #card{
     width: 280px;
@@ -62,5 +63,14 @@ ul li:hover {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 40px;
+    gap: 40px;
+}
+#cart{
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 1rem;
+    background-color: whitesmoke;
+    
 }
