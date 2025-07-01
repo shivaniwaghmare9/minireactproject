@@ -14,7 +14,16 @@ const Display=()=>{
     useEffect(()=>{
         loadData()
     },[])
-    const ans=mydata.map((key)=>{
+
+    const [currentPage, setCurrentPage]= useState(1);
+  const recordsPerPage=3;
+  const lastIndex= currentPage*recordsPerPage;
+  const firstIndex= lastIndex-recordsPerPage;
+  const records= mydata.slice(firstIndex, lastIndex);
+  const npage= Math.ceil(mydata.length/recordsPerPage);
+  const numbers=[...Array(npage+1).keys()].slice(1);
+
+    const ans=records.map((key)=>{
         return(
             <>
     <Card id="card">
