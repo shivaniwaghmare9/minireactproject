@@ -58,8 +58,8 @@ ul li{
     align-items: center;
     border-radius: 50%;
     transition: transform 0.3s ease;
-  transform-style: preserve-3d;
-  cursor: pointer;
+   transform-style: preserve-3d;
+   cursor: pointer;
 }
 ul li:hover {
   transform: perspective(600px) translateZ(20px);
