@@ -42,11 +42,53 @@ const Display=()=>{
             </>
         )
     })
+
+    function prePage()
+{
+  if(currentPage!==1)
+  {
+    setCurrentPage(currentPage-1);
+  }
+}
+
+function changeCPage(id)
+{
+  setCurrentPage(id)
+}
+
+function nextPage()
+{
+   if (currentPage!==npage )
+   {
+    setCurrentPage(currentPage+1);
+   }
+}
+
     return(
         <>
          <div id="carddata">
             {ans}
          </div>
+
+         <nav className="pagin">
+         <ul className="display">
+          <li>
+             <a href="#" onClick={prePage}> Pre </a>   
+          </li>
+         {
+           numbers.map((n, i)=>(   
+               <li className="mynum">
+               <a href="#" onClick={()=>{changeCPage(n)}}>{n}</a>
+              </li>
+              ))
+         }     
+         <li style={{paddingLeft:"20px"}}>
+           <a href="#" onClick={nextPage}> Next </a>
+         </li>
+         </ul>
+      </nav>
+
+
         </>
     )
 }
