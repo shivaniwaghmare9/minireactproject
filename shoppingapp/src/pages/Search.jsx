@@ -3,18 +3,18 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { addCart } from '../cartSlice';
-import { useDispatch } from 'react-redux';
+// import { addCart } from '../cartSlice';
+// import { useDispatch } from 'react-redux';
 
 const Search=()=>{
  
  const [mydata, setMydata]= useState([]);
- const dispatch = useDispatch();
+//  const dispatch = useDispatch();
  const [product, setProduct] = useState("");
 
 
  const loadData=async()=>{
-    const api=`https://mocki.io/v1/10512a17-105f-435d-a920-dce1478345bd`
+    const api="https://mocki.io/v1/10512a17-105f-435d-a920-dce1478345bd"
     const response = await axios.get(api);
     console.log(response.data);
     setMydata(response.data);
@@ -31,7 +31,7 @@ const handleInput=(e)=>{
 const ans=mydata.map((key)=>{
      return(
         <>
-     <Card style={{ width: '18rem' }}>
+     <Card id='card'>
       
       <Card.Body>
         <Card.Title><h4>Product Name:{key.productName}</h4></Card.Title>
@@ -59,7 +59,7 @@ const ans=mydata.map((key)=>{
         onChange={handleInput} id="inpt"/>
        </center>
        <br /> <br /> <br />
-      <div id='cardData'>
+      <div id='carddata'>
       {ans}
       </div>     
         </>
