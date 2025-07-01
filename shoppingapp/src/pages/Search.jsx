@@ -31,7 +31,7 @@ const handleInput=(e)=>{
 const ans=mydata.map((key)=>{
      return(
         <>
-     <Card id='card'>
+     <Card id="cart">
       
       <Card.Body>
         <Card.Title><h4>Product Name:{key.productName}</h4></Card.Title>
@@ -59,7 +59,7 @@ const ans=mydata.map((key)=>{
         onChange={handleInput} id="inpt"/>
        </center>
        <br /> <br /> <br />
-      <div id='carddata'>
+      <div id='cardData'>
       {ans}
       </div>     
         </>

@@ -13,16 +13,8 @@
     border: none;
     padding: 1rem;
     background-color:whitesmoke;
-    
 }
-.cartbtn{
-  background-color: black;
-  color: aliceblue;
-}
- .cartbtn:hover{
-  background-color: aliceblue;
-  color: black;
-}
+
 #card {
   transform: translateY(-5px); /* Thoda upar le jaata hai */
   cursor: pointer;            /* Cursor ko pointer banata hai */
@@ -65,4 +57,10 @@ ul li:hover {
   transform: perspective(600px) translateZ(20px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-/*============================================================================================================================================*/
+/*==========================================================SEARCH==================================================================================*/
+#cardData{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
