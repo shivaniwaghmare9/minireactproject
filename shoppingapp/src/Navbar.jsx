@@ -12,6 +12,7 @@ const Topnav=()=>{
           <Nav className="me-auto">
             <Nav.Link as={Link} to="display">Display</Nav.Link>
             <Nav.Link as={Link} to="sort">Sorting</Nav.Link>
+            <Nav.Link as={Link} to="search">Search</Nav.Link>
             
           </Nav>
         </Container>
