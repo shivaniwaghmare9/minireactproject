@@ -16,7 +16,7 @@ const Display=()=>{
     },[])
 
     const [currentPage, setCurrentPage]= useState(1);
-  const recordsPerPage=3;
+  const recordsPerPage=4;
   const lastIndex= currentPage*recordsPerPage;
   const firstIndex= lastIndex-recordsPerPage;
   const records= mydata.slice(firstIndex, lastIndex);
@@ -36,7 +36,7 @@ const Display=()=>{
                 <h6>Colo:r{key.color}</h6>
                 <h6>Size:{key.size}</h6>
         </Card.Text>
-        <Button variant="primary" id="cartbtn" onClick={()=>{dispatch(addCart({id:key.id, productName:key.productName, brandName:key.brandName,price:key.price, color:key.color,key:key.size}))}}>Add cart</Button>
+        <Button variant="primary" className="cartbtn" onClick={()=>{dispatch(addCart({id:key.id, productName:key.productName, brandName:key.brandName,price:key.price, color:key.color,key:key.size}))}}>Add cart</Button>
       </Card.Body>
     </Card>
             </>
