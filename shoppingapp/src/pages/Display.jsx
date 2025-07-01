@@ -35,7 +35,7 @@ const Display=()=>{
     })
     return(
         <>
-         <div>
+         <div id="carddata">
             {ans}
          </div>
         </>
