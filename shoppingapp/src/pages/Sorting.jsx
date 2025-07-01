@@ -16,6 +16,20 @@ const Sorting=()=>{
         loadData()
     },[])
 
+    const sortdata=()=>{
+      let datasort = [...mydata].sort((a,b)=>{
+        const nameA = a.productname.toLowerCase();
+        const nameB = b.productname.toLowerCase();
+        if(nameA < nameB){
+            return -1;
+        }else{
+            return 1;
+        }
+      })
+      setMydata(datasort);
+      console.log(datasort);
+    }  
+
     const [currentPage, setCurrentPage]= useState(1);
   const recordsPerPage=4;
   const lastIndex= currentPage*recordsPerPage;
@@ -29,7 +43,7 @@ const Sorting=()=>{
             <>
     <Card id="card">
       <Card.Body>
-        <Card.Title><h4>Product Name:{key.productName}</h4></Card.Title>
+        <Card.Title><h4 onClick={sortdata}>Product Name:{key.productName}</h4></Card.Title>
         <Card.Text>
                 <h6>Id:{key.serialId}</h6>
                 <h6>Brandname:{key.brandName}</h6>
