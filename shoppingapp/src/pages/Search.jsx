@@ -29,6 +29,7 @@ const handleInput=(e)=>{
       setProduct(value);
 }
 const ans=mydata.map((key)=>{
+     
      return(
         <>
      <Card id="cart">
