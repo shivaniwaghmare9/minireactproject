@@ -7,18 +7,13 @@
     gap: 40px;
     margin-top: 40px;
 }
-#img{
-    height: 300px;
-    width: 300px;
-    
-}
-
 #card{
     width: 300px;
     display: flex;
     justify-content: center;
     gap: 50px;
     border: none;
+    padding: 1rem;
     background-color:whitesmoke;
     
 }

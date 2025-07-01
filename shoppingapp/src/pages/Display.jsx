@@ -17,7 +17,7 @@ const Display=()=>{
     const ans=mydata.map((key)=>{
         return(
             <>
-    <Card style={{ width: '14rem' }} id="card">
+    <Card id="card">
       <Card.Body>
         <Card.Title><h4>Product Name:{key.productName}</h4></Card.Title>
         <Card.Text>
@@ -27,7 +27,7 @@ const Display=()=>{
                 <h6>Colo:r{key.color}</h6>
                 <h6>Size:{key.size}</h6>
         </Card.Text>
-        <Button variant="primary" id="cardbtn" onClick={()=>{dispatch(addCart({id:key.id, productName:key.productName, brandName:key.brandName,price:key.price, color:key.color,key:key.size}))}}>Add cart</Button>
+        <Button variant="primary" id="cartbtn" onClick={()=>{dispatch(addCart({id:key.id, productName:key.productName, brandName:key.brandName,price:key.price, color:key.color,key:key.size}))}}>Add cart</Button>
       </Card.Body>
     </Card>
             </>
