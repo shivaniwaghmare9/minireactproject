@@ -36,8 +36,9 @@
 /*====================================================PAGINATION======================================================================================*/
 .pagin{
  background-color: rgb(113, 176, 215);
- height: 50px;
+ height: 80px;
  padding: 1rem;
+ margin-top: 30px;
 }
 ul {
     display: flex;
@@ -49,6 +50,13 @@ ul {
 }
 ul li{
     text-decoration: none;
-    color: aliceblue;
+    background-color:aliceblue;
+    width: 50px;
+    height: 50px;
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 /*============================================================================================================================================*/

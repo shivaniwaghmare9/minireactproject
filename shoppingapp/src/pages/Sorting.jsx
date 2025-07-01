@@ -1,9 +1,10 @@
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-const Display=()=>{
+const Sorting=()=>{
     const[mydata,setMydata]=useState([]);
     const loadData=async()=>{
         let api="https://mocki.io/v1/10512a17-105f-435d-a920-dce1478345bd"
@@ -92,4 +93,4 @@ const Display=()=>{
         </>
     )
 }
-export default Display;
+export default Sorting;
