@@ -1,0 +1,13 @@
+
+#counter{
+    width: 400px;
+    height: 200px;
+    background-color: lightgray;
+    padding: 1rem;
+    margin: 3rem;
+    margin-left: 33%;
+}
+.count{
+    display: flex;
+    gap: 20px;
+}

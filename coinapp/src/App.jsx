@@ -16,12 +16,14 @@ const App=()=>{
     const dispatch=useDispatch();
     return(
         <>
-        <div>
+        <div id="counter">
         <h3>Flip Coin</h3>
         <h4>{coin}</h4>
+        <div className="count">
         <h4>TotalCount:{count}</h4>
         <h4>HeadsCount:{headscount}</h4>
         <h4>TailsCount:{tailscount}</h4>
+        </div>
         <button onClick={()=>{dispatch(flipcount())}}>Flip</button>
         </div>
          
