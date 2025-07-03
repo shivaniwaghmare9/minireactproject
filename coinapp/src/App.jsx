@@ -23,7 +23,11 @@ const App=()=>{
     return(
         <>
         <h3>flip coin</h3>
-        <h4></h4>
+        <h4>{coin}</h4>
+        <p>Flipcount:{flipcount}</p>
+        <p>Heads:{heads}</p>
+        <p>Tails:{tails}</p><br/><br/>
+        <button onClick={flipcoin}>Click</button>
 
         </>
     )
