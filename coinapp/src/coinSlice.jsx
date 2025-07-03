@@ -4,14 +4,14 @@ const coinSlice=createSlice({
     name:"mycoin",
     initialState:{
         coin:"Heads",
-        flipcount:0,
+        count:0,
         headscount:0,
         tailscount:0
     },
     reducers:{
         flipcount:(state)=>{
             state.coin=Math.random() < 0.5 ?"Heads":"Tails";
-            state.flipcount+=1;
+            state.count+=1;
             if(state.coin==="Heads")
             {
                 state.headscount+=1;
@@ -23,3 +23,5 @@ const coinSlice=createSlice({
         }
     }
 })
+export const {flipcount}=coinSlice.actions;
+export default coinSlice.reducer;
