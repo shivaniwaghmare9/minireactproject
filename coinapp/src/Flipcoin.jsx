@@ -1,7 +1,8 @@
 
+
 import { useState } from "react";
 
-const App=()=>{
+const Flip=()=>{
     const[coin,setCoin]=useState("Heads")
     const[flipcount,setFlipcount]=useState(0)
     const[heads,setHeads]=useState(0)
@@ -31,4 +32,4 @@ const App=()=>{
     </>
     )
 }
-export default App;
+export default Flip;
