@@ -2,11 +2,12 @@
 #counter{
     width: 400px;
     height: 250px;
-    background-color: aliceblue;
+    background-color: rgb(188, 197, 198);
     padding: 1.4rem;
     margin: 3rem;
     margin-left: 33%;
     box-shadow: 0 8px 16px rgba(148, 145, 145, 0.2);
+    border-radius: 20px;
 }
 .coin{
     width: 60px;
@@ -26,16 +27,19 @@
     background-color: lightcyan;
     padding: 0.3rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
 }
 #btn2{
     background-color: lightgray;
     padding: 0.3rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
 }
 #btn3{
     background-color: lightsteelblue;
     padding: 0.3rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+   
 }
 .btn{
     padding: 0.5rem;
