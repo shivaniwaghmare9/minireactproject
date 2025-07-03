@@ -1,7 +1,4 @@
 import Flip from "./Flipcoin";
-
-
-
 const App=()=>{
     return(
     <>
