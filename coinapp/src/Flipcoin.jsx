@@ -23,7 +23,7 @@ const Flip=()=>{
     }
     return(
     <>
-        <h3>flip coin</h3>
+        
         <h4>{coin}</h4>
         <p>Flipcount:{flipcount}</p>
         <p>Heads:{heads}</p>
