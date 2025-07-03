@@ -17,7 +17,7 @@ const App=()=>{
     return(
         <>
         <div id="counter">
-        <h2><span style={{color:"darkred"}}>FL</span>IP  <span style={{color:"darkred"}}>C</span>OIN</h2>
+        <h2><span style={{color:"darkred"}}>FL</span>IP  <span style={{color:"darkred"}}>CO</span>IN</h2>
         <div className="coin">
         <h4>{coin}</h4>
         </div>
