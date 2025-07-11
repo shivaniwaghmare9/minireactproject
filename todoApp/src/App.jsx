@@ -38,19 +38,19 @@ const App=()=>{
           )}
         </td>
           <td>
-            <span onClick={()=>{dispatch(taskDelete({id:key.id}))}}>delete</span>
+            <span onClick={()=>{dispatch(taskDelete({id:key.id}))}} style={{cursor:"pointer"}}>delete</span>
           </td>
           <td>
-            <span onClick={()=>{dispatch(taskReindex({id:index}))}}>Remove</span>
+            <span onClick={()=>{dispatch(taskReindex({id:index}))}} style={{cursor:"pointer"}}>Remove</span>
           </td>
           <td>
-            <span onClick={()=>{dispatch(taskComplete({id:key.id}))}}>complete</span>
+            <span onClick={()=>{dispatch(taskComplete({id:key.id}))}} style={{cursor:"pointer"}}>complete</span>
           </td>
           <td>
-            <span onClick={()=>{dispatch(taskInComplete({id:key.id}))}}>incomplete</span>
+            <span onClick={()=>{dispatch(taskInComplete({id:key.id}))}} style={{cursor:"pointer"}}>incomplete</span>
           </td>
           <td>
-            <span onClick={()=>{dispatch(dataEdit(key.id,key.work))}}>edit</span>
+            <span onClick={()=>{dispatch(dataEdit(key.id,key.work))}} style={{cursor:"pointer"}}>edit</span>
           </td>
        </tr>
       </>
@@ -58,11 +58,12 @@ const App=()=>{
   })
   return(
     <>
-     <h1>Todo App!!</h1>
-     Enter Task: <input type="text" value={txt} onChange={(e)=>{setTxt(e.target.value)}}/><br/><br/>
+    <div className="box">
+     <h3 className='head'>Todo App!!</h3>
+     Enter Task: <input type="text" value={txt} onChange={(e)=>{setTxt(e.target.value)}} id="inp"/><br/><br/>
      { btn ?(
         <>
-        <button onClick={()=>{dispatch(addTask({id:Date.now(),work:txt,taskStatus:false}))}}>Add</button><br/><br/>
+        <button onClick={()=>{dispatch(addTask({id:Date.now(),work:txt,taskStatus:false}))}} className="btn">Add</button><br/><br/>
         </>
         ):(
           <>
@@ -71,7 +72,8 @@ const App=()=>{
         )
 
      }
-     <Table striped bordered hover size="sm">
+    </div>
+     <Table striped bordered hover size="sm"variant="dark">
       <thead>
         <tr>
           <th>Sno</th>
