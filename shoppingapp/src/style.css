@@ -1,3 +1,83 @@
+===============================================================NAVBAR======================================================================
+.me-auto{
+    margin-left: 30%;
+    
+}
+/*============================================================HOME===========================================================================*/
+#carddata{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 40px;
+}
+#card{
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 1rem;
+    background-color:whitesmoke;
+}
+
+#card {
+  transform: translateY(-5px); /* Thoda upar le jaata hai */
+  cursor: pointer;            /* Cursor ko pointer banata hai */
+  transition: transform 0.3s ease; /* Smooth animation ke liye */
+}
+#card:hover {
+  transform: perspective(600px) translateZ(20px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/*====================================================PAGINATION======================================================================================*/
+.pagin{
+ background-color: rgb(113, 176, 215);
+ height: 80px;
+ padding: 1rem;
+ margin-top: 30px;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 30px;
+    color: aliceblue;
+    
+}
+ul li{
+    text-decoration: none;
+    background-color:aliceblue;
+    width: 50px;
+    height: 50px;
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+   transform-style: preserve-3d;
+   cursor: pointer;
+}
+ul li:hover {
+  transform: perspective(600px) translateZ(20px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/*==========================================================SEARCH==================================================================================*/
+#cardData{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+#cart{
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 1rem;
+    background-color: whitesmoke;
+}
+
 /*===============================================================NAVBAR======================================================================*/
 .me-auto{
     margin-left: 30%;
@@ -77,3 +157,4 @@ ul li:hover {
     padding: 1rem;
     background-color: whitesmoke;
 }
+
